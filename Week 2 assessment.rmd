@@ -1,0 +1,17 @@
+---
+title: "R Markdown and Leaflet - Assessment"
+author: "Subhranshu"
+date: "June 17, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r prerequisites}
+library(leaflet)
+
+my_map <- leaflet() %>% addTiles() 
+my_map <- my_map %>% addMarkers(lat=-26.158632, lng= 27.903283, popup="Our Office")
+my_map
